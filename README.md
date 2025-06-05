@@ -12,8 +12,11 @@ Determined list of necessary files from ChaptGPT:
     popup.html: The popup UI (when you click the extension icon).
     popup.js: The logic for the popup UI.
     styles.css: Optional styling for your popup.
+    /icons/ folder with icon16.png icon48.png icon128.png
 
 
-Created manifest.json from Chrome documentation
+Wrote manifest.json from Chrome documentation
 https://developer.chrome.com/docs/extensions/reference/manifest#minimal-manifest
 ChatGPT crafted final code
+
+
