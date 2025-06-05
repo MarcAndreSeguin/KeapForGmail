@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Keap CRM Viewer for Gmail",
+  "description": "Overlay Keap CRM data when replying to Gmail contacts.",
+  "version": "1.0",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://mail.google.com/*", "https://*.infusionsoft.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
