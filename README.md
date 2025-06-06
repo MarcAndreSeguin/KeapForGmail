@@ -28,6 +28,10 @@ All UI appears in the popup window, not the Gmail interface directly
 ### 2025-06-06
 Determined what v1 of chrome extension will do. Added to top of README.md file
 
+Added scaffolding to popup.html
+
+
+
 ### 2025-06-05
 Determined list of necessary files from ChaptGPT:
     manifest.json: The config file that tells Chrome how your extension behaves.
