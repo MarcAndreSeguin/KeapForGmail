@@ -1,5 +1,5 @@
 # Keap CRM Viewer for Gmail
-#### Video Demo:  <URL HERE>
+#### Video Demo:  [<URL HERE>](https://www.youtube.com/watch?v=PQFmlWWbMQY)
 #### Description:
 
 A Chrome extension that allows Gmail users to quickly view Keap CRM customer profiles if the customer exists in the database. It requires a valid Gmail account and a linked Keap account with an API key. This mimics the behavior of the Hubspot Sales Extension, where an icon appears on the Gmail sidebar and allows a miniature version of the customer profile and properties to be displayed and edited on the fly.
