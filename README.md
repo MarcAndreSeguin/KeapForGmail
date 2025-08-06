@@ -2,53 +2,48 @@
 #### Video Demo:  <URL HERE>
 #### Description:
 
-A Chrome extension that allows Gmail users to quickly view Keap CRM customer profiles (if customer exist in database). Requires a valid gmail account and a linked Keap account (API key) This mimmicks the behavior of the Hubspot Sales Extension in which an icon appears on the Gmail sidebar and allows a miniature version of the customer profile and properties to be displayed and edited on the fly.
+A Chrome extension that allows Gmail users to quickly view Keap CRM customer profiles if the customer exists in the database. It requires a valid Gmail account and a linked Keap account with an API key. This mimics the behavior of the Hubspot Sales Extension, where an icon appears on the Gmail sidebar and allows a miniature version of the customer profile and properties to be displayed and edited on the fly.
 
-More formally, the goal is:
-Create a simple, clickable Chrome extension (from the puzzle piece icon) that conditionally displays Keap contact data only when replying to an email in Gmail.
+More formally, the goal is to create a simple, clickable Chrome extension (accessible from the puzzle piece icon) that conditionally displays Keap contact data only when replying to an email in Gmail.
 
 Core Behavior
-Outside of Gmail: The popup shows a blank or friendly message (e.g., “This extension works inside Gmail.”)
+When outside of Gmail, the popup shows a friendly message such as “No contact found.”
 
-Inside Gmail (Reply view):
-When the user is replying to an email and the sender's email exists in Keap, display the basic contact profile pulled from the Keap API.
+When inside Gmail (specifically in the reply view), the extension displays the basic contact profile pulled from the Keap API, provided the sender's email exists in Keap.
 
-Displayed Fields (from Keap): Full Name, Email Address, Phone Number, Contact Type (one of: Lead, Client, or Other)
-As development progresses,we may display "all loadable properties" in the extension.
+Currently displayed fields from Keap include Full Name, Email Address, and Phone Number. Future development may include displaying all available contact properties.
 
-Design Style: Mimic the Keap UI style for consistency(colors, fonts, spacing — can use DevTools to inspect Keap’s CSS and reuse relevant styles or classes)
+The design style closely mimics Keap's UI for consistency, including colors, fonts, and spacing.
 
-Additional Notes
-The extension is not injected into Gmail’s DOM in v1 (no sidebar yet)
-Data is pulled from Keap’s API (assumes OAuth is handled)
-All UI appears in the popup window, not the Gmail interface directly
+The extension is not injected into Gmail’s DOM directly in v1—there is no sidebar yet. Instead, data is pulled from Keap’s API and displayed within the popup window only.
 
 
+### 2025-08-04
+
+Implemented MutationObserver logic in content.js to monitor changes to Gmail’s recipient field, ensuring the extension consistently updates the displayed Keap contact information as needed.
+
+### 2025-08-03
+
+Completed the logic in popup.js to make an API call to Keap, fetching and displaying the relevant contact information when the popup is activated.
+
+### 2025-08-02
+
+Styled the extension popup using a dedicated CSS file (styles.css), ensuring visual consistency with the existing Keap user interface.
+
+### 2025-08-01
+
+Built initial JavaScript scaffolding in popup.js to handle popup interactions and basic UI logic.
 
 ### 2025-06-06
-Determined what v1 of chrome extension will do. Added to top of README.md file
 
-Added scaffolding to popup.html and popup.js ("Hello, World" style)
-
-
+Determined the minimum viable product (v1) scope of the Chrome extension, and summarized functionality at the top of the README file. Set up initial popup.html and popup.js with a basic "Hello, World" style interface.
 
 ### 2025-06-05
-Determined list of necessary files from ChaptGPT:
-    manifest.json: The config file that tells Chrome how your extension behaves.
-    background.js: Runs in the background; can handle persistent actions, auth, or messaging.
-    content.js: Injected into Gmail/Keap pages to read or manipulate DOM.
-    popup.html: The popup UI (when you click the extension icon).
-    popup.js: The logic for the popup UI.
-    styles.css: Optional styling for your popup.
 
+Determined the necessary files for the extension, including manifest.json, background.js, content.js, popup.html, popup.js, and an optional styles.css file.
 
-Created manifest.json from Chrome documentation
-https://developer.chrome.com/docs/extensions/reference/manifest#minimal-manifest
-ChatGPT crafted final code
+Created manifest.json from official Chrome documentation. The final version of this file was generated with assistance from ChatGPT.
 
-Create repository on GitHub
-https://github.com/MarcAndreSeguin/KeapForGmail
+Initialized GitHub repository at https://github.com/MarcAndreSeguin/KeapForGmail.
 
-Learned how to "git add .", "git commit -m "Message", and "git push origin main".
-And finally how to git pull from local folder to test files in Chrome, locally
-
+Learned basic git commands ("git add .", "git commit -m 'Message'", "git push origin main") and tested files locally using git pull.

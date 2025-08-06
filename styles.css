@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: white;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+  min-width: 280px;
+  max-width: 340px;
+  box-sizing: border-box;
+}
+
+/* Container for the contact card */
+.keap-card {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Initials circle */
+.keap-initials {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Full name */
+.keap-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Phone and email lines */
+.keap-phone,
+.keap-email {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* View in Keap button */
+.keap-button {
+  margin-top: 16px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #2AC769;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.keap-button:hover {
+  background-color: #24b25a;
+}
+

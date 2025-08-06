@@ -1,0 +1,12 @@
+{
+  "name": "keapforgmail",
+  "version": "1.0.0",
+  "description": "A Chrome extension that allows Gmail users to quickly view Keap CRM customer profiles (if customer exist in database). Requires a valid gmail account and a linked Keap account (API key) This mimmicks the behavior of the Hubspot Sales Extension in which an icon appears on the Gmail sidebar and allows a miniature version of the customer profile and properties to be displayed and edited on the fly.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
